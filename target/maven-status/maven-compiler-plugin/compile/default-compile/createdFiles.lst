@@ -1,0 +1,8 @@
+Apartment.class
+ApartmentResource.class
+Customer.class
+Database.class
+RestProperties.class
+META-INF\services\javax.ws.rs.core.Application
+ApartmentServiceHealthCheck.class
+ApartmentApplication.class
