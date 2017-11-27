@@ -19,15 +19,16 @@ kumuluzee:
   #config:
   #  etcd:
   #    hosts: http://192.168.99.100:2379
-  #health:
-  #  checks:
-  #    data-source-health-check:
-  #      jndi-name: jdbc/ApartmentDS
-  #metrics:
-  #    web-instrumentation:
-  #      - name: orders-endpoint
-  #        url-pattern: /v1/apartments/*
+  health:
+    checks:
+      disk-space-health-check:
+        threshold: 100000000
+  metrics:
+      web-instrumentation:
+        - name: apartments-endpoint
+          url-pattern: /v1/apartments/*
 rest-properties:
   external-services:
     order-service:
       enabled: true
+  healthy: true
