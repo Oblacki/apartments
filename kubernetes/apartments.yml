@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: apartments-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apartments
+    spec:
+      containers:
+      - image: oblacki/apartments:oblacek
+        name: apartments
+        env:
+          - name: KUMULUZEE_DISCOVERY_CLUSTER
+            value: bluemix
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: server
+          initialDelaySeconds: 20
+          periodSeconds: 3
+        ports:
+        - containerPort: 8081
+          name: server
+          protocol: TCP
