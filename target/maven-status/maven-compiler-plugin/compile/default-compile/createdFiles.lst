@@ -1,9 +1,9 @@
 Apartment.class
-ApartmentResource.class
-Customer.class
 Database.class
-RestProperties.class
-LogContextInterceptor.class
 META-INF\services\javax.ws.rs.core.Application
 ApartmentServiceHealthCheck.class
 ApartmentApplication.class
+ApartmentResource.class
+Customer.class
+RestProperties.class
+LogContextInterceptor.class

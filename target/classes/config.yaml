@@ -15,10 +15,13 @@ kumuluzee:
   #    max-pool-size: 20
   discovery:
     etcd:
-      hosts: http://192.168.99.100:2379
+      hosts: http://localhost:2379
+    ttl: 20
+    ping-interval: 15
   #config:
   #  etcd:
   #    hosts: http://192.168.99.100:2379
+
   health:
     checks:
       disk-space-health-check:
@@ -51,4 +54,4 @@ rest-properties:
   external-services:
     order-service:
       enabled: true
-  healthy: true
+  healthy: false
