@@ -13,7 +13,6 @@ kumuluzee:
   config:
     etcd:
       hosts: http://localhost:2379
-
   health:
     checks:
       disk-space-health-check:

@@ -6,6 +6,6 @@ WORKDIR /app
 
 ADD ./target/apartments-2.5.0-SNAPSHOT.jar /app
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["java", "-jar", "apartments-2.5.0-SNAPSHOT.jar"]
