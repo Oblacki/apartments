@@ -30,6 +30,8 @@ public class LogContextInterceptor {
 
         try (final CloseableThreadContext.Instance ctc = CloseableThreadContext.putAll(settings)) {
             Object result = context.proceed();
+            System.out.println(result.toString());
+            System.out.println(ctc.toString());
             return result;
         }
     }
