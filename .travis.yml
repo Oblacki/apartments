@@ -19,4 +19,4 @@ script:
 
 after_success:
 - docker login -u="$OBLACKI_USER" -p="$OBLACKI_PASS"
-- docker push oblacki/apartments:oblacek
+- docker push oblacki/apartments:oblacek2
