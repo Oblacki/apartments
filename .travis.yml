@@ -15,7 +15,7 @@ directories:
 
 script:
 - mvn clean package -U
-- docker build -t oblacki/apartments:oblacek .
+- docker build -t oblacki/apartments:oblacek2 .
 
 after_success:
 - docker login -u="$OBLACKI_USER" -p="$OBLACKI_PASS"
