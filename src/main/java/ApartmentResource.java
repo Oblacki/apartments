@@ -89,7 +89,7 @@ public class ApartmentResource {
         String opis_projekta = "Najin projekt implementira aplikacijo za oddajo nepremicnin.";
         json.put("opis_projekta", opis_projekta);
 
-        String[] ms = {"http://169.51.18.147:31400/v1/apartments", "http://169.51.18.147:30846/v1/customers"};
+        String[] ms = {"http://169.51.18.147:30467/v1/apartments", "http://169.51.18.147:30846/v1/customers"};
         json.put("mikrostoritve", ms);
 
         String[] github = {"https://github.com/Oblacki/apartments", "https://github.com/Oblacki/customer"};
