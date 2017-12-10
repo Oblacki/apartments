@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e802ef-411b-452b-9c72-6df628114f9e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kubernetes/apartments.yml" afterPath="$PROJECT_DIR$/kubernetes/apartments.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ApartmentResource.java" afterPath="$PROJECT_DIR$/src/main/java/ApartmentResource.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apartments.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="apartments.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kubernetes/apartments.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -89,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApartmentResource.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApartmentResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ApartmentResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
+            <state relative-caret-position="708">
+              <caret line="101" column="39" lean-forward="false" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -352,12 +350,12 @@
       <workItem from="1512207087999" duration="7741000" />
       <workItem from="1512314868709" duration="2255000" />
       <workItem from="1512813436383" duration="4214000" />
-      <workItem from="1512906359830" duration="1151000" />
+      <workItem from="1512906359830" duration="2082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31877000" />
+    <option name="totallyTimeSpent" value="32808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -821,16 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ApartmentResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kubernetes/apartments-service.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -852,6 +840,16 @@
         <state relative-caret-position="204">
           <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ApartmentResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="101" column="39" lean-forward="false" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

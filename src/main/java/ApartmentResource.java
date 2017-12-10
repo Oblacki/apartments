@@ -98,8 +98,8 @@ public class ApartmentResource {
         String[] travis = {"https://travis-ci.org/Oblacki/apartments", "https://travis-ci.org/Oblacki/customer"};
         json.put("travis", travis);
 
-        String[] docker = {"https://hub.docker.com/r/oblacki/apartments/", "https://hub.docker.com/r/oblacki/customers/"};
-        json.put("docker", docker);
+        String[] dockerhub = {"https://hub.docker.com/r/oblacki/apartments/", "https://hub.docker.com/r/oblacki/customers/"};
+        json.put("dockerhub", dockerhub);
 
         return Response.ok(json.toString(), MediaType.APPLICATION_JSON).build();
     }
