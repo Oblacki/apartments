@@ -14,27 +14,6 @@ public class Database {
     }
     public static List<Apartment> getApartments() { return apartments; }
 
-    //customers
-    public static Customer getCustomer(String customerId) {
-        for (Customer customer : customers) {
-            if (customer.getId().equals(customerId))
-                return customer;
-        }
-        return null;
-    }
-
-    public static void addCustomer(Customer customer) {
-        customers.add(customer);
-    }
-
-    public static void deleteCustomer(String customerId) {
-        for (Customer customer : customers) {
-            if (customer.getId().equals(customerId)) {
-                customers.remove(customer);
-                break;
-            }
-        }
-    }
 
     //apartments
     public static void deleteApartment(String apartmentId) {
@@ -64,6 +43,20 @@ public class Database {
         for (Apartment apartment : apartments) {
             if (apartment.getCustomerId().equals(customerId)) {
                 System.out.println(apartment.toString());
+                filteredApartments.add(apartment);
+            }
+        }
+        return filteredApartments;
+    }
+
+    public static List<Apartment> getApartmentsByGuestId(String guestId) {
+        List<Apartment> filteredApartments = new ArrayList<Apartment>();
+
+        for (Apartment apartment : apartments) {
+            List<String> guestIds = apartment.getGuestIds();
+            if(guestIds.contains(guestId)){
+                System.out.println(apartment.toString());
+                apartment.setCustomerId("");
                 filteredApartments.add(apartment);
             }
         }

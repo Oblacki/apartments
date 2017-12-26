@@ -1,11 +1,18 @@
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.List;
+
 /**
  * @author Matej Dolenc
  */
+
 public class Apartment {
 
     private String id;
     private String numOfBeds;
     private String customerId;
+    private List<String> guestIds;
 
     public String getId() {
         return id;
@@ -30,5 +37,9 @@ public class Apartment {
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
+
+    public List<String> getGuestIds() { return guestIds; }
+
+    public void setGuestIds(List<String> guestIds) { this.guestIds = guestIds; }
 
 }

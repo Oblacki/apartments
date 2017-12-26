@@ -48,10 +48,23 @@ public class ApartmentResource {
                 : Response.status(Response.Status.NOT_FOUND).build();
     }
 
+    //external call - from customer
     @GET
     @Path("/customer/{customerId}")
     public Response getApartmentByCustomer(@PathParam("customerId") String customerId) {
         List<Apartment> apartments = Database.getApartmentByCustomerId(customerId);
+        return apartments != null
+                ? Response.ok(apartments).build()
+                : Response.status(Response.Status.NOT_FOUND).build();
+    }
+
+    //external call - from guest
+    @GET
+    @Path("/guest/{guestId}")
+    public Response getApartmentsByGuests(@PathParam("guestId") String guestId) {
+        System.out.println("got it");
+        List<Apartment> apartments = Database.getApartmentsByGuestId(guestId);
+
         return apartments != null
                 ? Response.ok(apartments).build()
                 : Response.status(Response.Status.NOT_FOUND).build();
