@@ -70,6 +70,18 @@ public class ApartmentResource {
                 : Response.status(Response.Status.NOT_FOUND).build();
     }
 
+    //external call - from price search
+    @GET
+    @Path("/price-search")
+    public Response getApartmentsByPriceFilter(@QueryParam("minPrice") double minPrice, @QueryParam("maxPrice") double maxPrice) {
+        System.out.println("got it");
+        List<Apartment> apartments = Database.getApartmentsByPriceFilter(minPrice, maxPrice);
+
+        return apartments != null
+                ? Response.ok(apartments).build()
+                : Response.status(Response.Status.NOT_FOUND).build();
+    }
+
     @POST
     public Response addNewApartment(Apartment apartment) {
         Database.addApartment(apartment);

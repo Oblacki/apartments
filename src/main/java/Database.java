@@ -63,4 +63,15 @@ public class Database {
         return filteredApartments;
     }
 
+    public static List<Apartment> getApartmentsByPriceFilter(double minPrice, double maxPrice) {
+        List<Apartment> filteredApartments = new ArrayList<Apartment>();
+
+        for (Apartment apartment : apartments) {
+            if(apartment.getPricePerNight() >= minPrice && apartment.getPricePerNight() <= maxPrice){
+                System.out.println(apartment.toString());
+                filteredApartments.add(apartment);
+            }
+        }
+        return filteredApartments;
+    }
 }
