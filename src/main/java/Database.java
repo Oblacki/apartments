@@ -56,7 +56,6 @@ public class Database {
             List<String> guestIds = apartment.getGuestIds();
             if(guestIds.contains(guestId)){
                 System.out.println(apartment.toString());
-                apartment.setCustomerId("");
                 filteredApartments.add(apartment);
             }
         }
@@ -69,6 +68,18 @@ public class Database {
         for (Apartment apartment : apartments) {
             if(apartment.getPricePerNight() >= minPrice && apartment.getPricePerNight() <= maxPrice){
                 System.out.println(apartment.toString());
+                filteredApartments.add(apartment);
+            }
+        }
+        return filteredApartments;
+    }
+
+    public static List<Apartment> getApartmentsByFacilitiesFilter(List<String> list) {
+        List<Apartment> filteredApartments = new ArrayList<Apartment>();
+
+        for (Apartment apartment : apartments) {
+            if(apartment.getFacilities().containsAll(list)){
+                //System.out.println(apartment.toString());
                 filteredApartments.add(apartment);
             }
         }

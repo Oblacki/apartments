@@ -82,6 +82,18 @@ public class ApartmentResource {
                 : Response.status(Response.Status.NOT_FOUND).build();
     }
 
+    //external call - from facilities
+    @GET
+    @Path("/facilities")
+    public Response getApartmentsByFacilitiesFilter(@QueryParam("list") final List<String> list) {
+        System.out.println("got it");
+        List<Apartment> apartments = Database.getApartmentsByFacilitiesFilter(list);
+
+        return apartments != null
+                ? Response.ok(apartments).build()
+                : Response.status(Response.Status.NOT_FOUND).build();
+    }
+
     @POST
     public Response addNewApartment(Apartment apartment) {
         Database.addApartment(apartment);

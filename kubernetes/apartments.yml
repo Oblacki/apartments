@@ -10,7 +10,7 @@ spec:
         app: apartments
     spec:
       containers:
-      - image: oblacki/apartments:261217v2
+      - image: oblacki/apartments:271217v1
         name: apartments
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
